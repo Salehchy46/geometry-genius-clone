@@ -68,6 +68,24 @@ function calculateEllipseArea() {
   addToCalculationEntry('Ellipse', areaToTwoDecimal);
 }
 
+function calculateRhombysArea() {
+  const longDiagonal = getInputValue('rhombus-long-diagonal');
+  const shortDiagonal = getInputValue('rhombus-short-diagonal');
+  const area = 0.5 * longDiagonal * shortDiagonal;
+
+  setElmentInnerText('rhombus-area', area);
+  addToCalculationEntry('Rhombus', area);
+}
+
+function calculatePentagonArea() {
+  const pentagonPerimeter = getInputValue('pentagon-perimeter');
+  const pentagonBase = getInputValue('pentagon-base');
+  const area = 0.5 * pentagonPerimeter * pentagonBase;
+
+  setElmentInnerText('pentagon-area', area);
+  addToCalculationEntry('Pentagona', area);
+}
+
 function addToCalculationEntry(areaType, area){
   const calculationEntry = document.getElementById('calculation-entry');
 
